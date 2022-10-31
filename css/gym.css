@@ -1,0 +1,249 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 10px; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-family: "Noto Sans Korean", sans-serif; vertical-align: baseline; box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body, html { margin: 0 auto; }
+
+ol, ul, li { list-style: none; }
+
+a { text-decoration: none; color: #000; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* clearfix */
+.clearfix:after { content: ""; display: block; clear: both; }
+
+/*.clearfix{*zoom:1;}
+.clearfix:before, .clearfix:after {display: block; content: '';line-height: 0;}
+.clearfix:after {clear: both;}*/
+/* IR 효과 */
+.ir_pm { display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px; }
+
+.ir_wa { display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%; }
+
+/* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+.ir_su { overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px; }
+
+/* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+/*블라인드*/
+.blind { position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; overflow: hidden; }
+
+#dispute_mediation_center { width: 100%; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center { width: 100%; max-width: 1562px; padding: 20px; margin: 50px auto 200px; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .header { padding-bottom: 10px; border-bottom: 4px solid 	 #A99D9D; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .header h2 { font-size: 1.8rem; color: #1B1616; line-height: 30px; }
+
+@media (min-width: 1320px) { #dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .header h2 { font-size: 4.8rem; padding-bottom: 36px; } }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt { margin-top: 30px; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dl dt { margin-top: 30px; color: #1b1616; font-size: 1.6rem; font-weight: bold; }
+
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd { margin-top: 10px; line-height: 20px; color: #665454; font-size: 1.4rem; }
+
+@media (min-width: 1320px) { #dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd { padding-left: 20px; min-width: 1024px; } }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd figure { display: block; width: 100%; height: auto; margin: 30px auto 30px; text-align: center; font-size: 1.4rem; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd figure img { width: 100%; max-width: 651px; height: auto; }
+
+@media (min-width: 1320px) { #dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd figure { width: 651px; height: 492px; margin-bottom: 60px; } }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .list dd figure figcaption { font-size: 1.8rem; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .contents_dispute_btn { width: 100%; height: 36px; min-width: 375px; text-align: center; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .contents_dispute_btn a { display: inline-block; width: 335px; height: 36px; border-radius: 8px; margin-top: 2rem; border: 1px solid #000; font-size: 1.6rem; font-weight: bold; line-height: 35px; }
+
+#dispute_mediation_center .container .contents_dispute_mediation_center .dispute_inner .terms_txt .contents_dispute_btn a:hover { background-color: #ED6D1F; border: 1px solid #ED6D1F; color: #fff; }
+
+/*========== 공지사항 작성하기 ==========*/
+
+#notice_board_txt { width: 100%; margin: 0 auto; }
+
+#notice_board_txt .container { max-width: 1562px; width: 100%; margin: 0 auto; }
+#notice_board_txt .container #contents_notice_board { width: 100%; margin: 0 auto;}
+
+#notice_board_txt .container #contents_notice_board .notice_inner { max-width: 1562px; width: 90%; /*padding: 0 5%; */ margin: 0 auto; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .header { display: flex; justify-content: space-between; padding-bottom: 11px; border-bottom: 2px solid  #A99D9D; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .header h2 { font-size: 2.5rem; color: #1B1616; }
+
+@media (min-width: 1320px) { #notice_board_txt .container #contents_notice_board .notice_inner .header h2 { font-size: 4.8rem; padding: 100px 0 36px; } }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box { margin-top: 40px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group label { float: left; display: block; width: 100%; max-width: 1122px;  white-space: nowrap; padding-bottom: 10px; font-size: 1.4rem; font-weight: 600; color: #4B4B4B;
+}
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group label label::placeholder { text-indent: 17px; font-size: 1.3rem; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group input { display: block; border: 1px solid #D8D6DE; border-radius: 5px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group input:focus { outline: transparent; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group input::placeholder { text-indent: 17px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form-control::placeholder { font-size: 1.3rem; color: #B9B9C3; font-family: 'Noto Sans KR'; }
+
+@media (min-width: 768px) { #notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_group input { display: block; } }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .form_tit input { width: 100%; max-width: 1122px; height: 42px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .board_area { margin-top: 21px; white-space: nowrap; padding-bottom: 19px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .board_area textarea { display: block; width: 100%; max-width: 1122px; height: 156px; display: block; border: 1px solid #D8D6DE; border-radius: 5px; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .board_area textarea:focus { outline: transparent; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .board_area textarea::placeholder { font-size: 1.3rem; padding-top: 17px; text-indent: 17px; color: #B9B9C3;}
+
+
+
+#notice_board_txt .container #contents_notice_board .notice_inner .input_file { width: 90%; display: flex; flex-wrap: wrap; justify-content: space-between;  } 
+#notice_board_txt .container #contents_notice_board .notice_inner .input_file .filebox{ width: 160px; height: 164px; background-color: #F5F5F5; }
+#notice_board_txt .container #contents_notice_board .notice_inner .input_file .filebox input[type="file"] { /* 파일 필드 숨기기 */ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .notice_board_btn { display: block; width: 156px; height: 38px; margin: 65px auto; background-color: #ED6D1F; border: none; border-radius: 100px; font-size: 1.3rem; font-weight: bold; color: #fff; }
+
+#notice_board_txt .container #contents_notice_board .notice_inner .notice_board_box form .notice_board_btn:hover { border: 1px solid #ED6D1F; background-color: #fff; color: #ED6D1F; }
+
+/*========== 공지사항 수수료 정책 ==========*/
+
+#notice_fee_info { width: 100%; }
+
+#notice_fee_info .container { max-width: 1562px; width: 90%; /*padding: 0 5%; */margin: 0 auto; }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner { width: 100%; height: 1866px; margin: 50px auto; }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .header { display: flex; justify-content: space-between; padding-bottom: 11px; border-bottom: 2px solid  #A99D9D; }
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .header { border-bottom: 4px solid #A99D9D;} }
+#notice_fee_info .container #contents_notice_fee .notice_inner .header h2 { font-size: 2.5rem; color: #1B1616; line-height: 30px; }
+
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .header h2 { font-size: 4.8rem; padding-bottom: 36px; } }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box { margin-top: 27px; }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl { width: 100%; max-width: 100%; height: auto; height: 100%; padding-bottom: 60%; /*	padding-bottom: 60%; */ /*	margin: { bottom: 8.0rem; };*/ background-image: url(../img/notice-bg.png); background-position: center 300px; background-size: 50% auto; background-repeat: no-repeat; }
+
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl { width: 100%; /* min-width: 768px; */padding-bottom: 45%; background-size: 548px auto;  } }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl dt { padding-left: 27px; background-image: url(../img/Q@2x.png); background-repeat: no-repeat; background-size: 20px 20px; background-position: left 0; font-size: 1.3rem; font-weight: bolder; color: #1B1616; }
+
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl dt { font-size:2.4rem; background-size: 30px 30px; padding-left: 46px;} }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl dd { padding-top: 26px; padding-left: 30px; font-size: 1.3rem; font-weight: 500; line-height: 24px; color: #1B1616; letter-spacing: -1.5px; }
+
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box dl dd { width: 100%; max-width: 1562px; padding-left: 44px; white-space: wrap; font-size: 2.4rem; line-height: 37px; letter-spacing: -1px; font-weight: normal; color: #1B1616;  padding-top: 54px;
+} }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn { display: flex; justify-content: center; align-items: center; margin-top: -13px; }
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn{ justify-content: left; padding-left: 30px; } }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a { display: inline-block; width: 29%; max-width: 242px; height: 39px; border-radius: 100px; background-color: red; text-align: center; line-height: 39px; padding-right: 16px; padding-left: 16px; font-size: 1.3rem; font-weight: bold; color: #fff;  }
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a {  display: inline-block;  height: 60px; font-size: 2rem; line-height: 60px;}  }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:nth-child(1) { width: 156px; background-color: #64749F; border: 1px solid #64749F; }
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:nth-child(1) { width: 242px;} }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:nth-child(2) { width: 156px; background-color: #E27B6D; border: 1px solid #E27B6D; margin-left: 29px; }
+@media (min-width: 1320px) { #notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:nth-child(2) { width: 242px;} }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:hover:nth-child(1) { background-color: #fff; border: 1px solid #64749F; color: #64749F; }
+
+#notice_fee_info .container #contents_notice_fee .notice_inner .notice_fee_box .notice_fee_btn a:hover:nth-child(2) { background-color: #fff; border: 1px solid #E27B6D; color: #E27B6D; }
+
+
+/*========== 공지사항 ==========*/
+
+#notice { width: 100%; }
+
+#notice .container { max-width: 1562px; margin: 0 auto; }
+
+#notice .container #contents_notice .notice_inner { max-width: 1562px; width: 90%; /* padding: 0 5%;*/ margin: 0 auto; }
+
+#notice .container #contents_notice .notice_inner .header { display: flex; justify-content: space-between;  border-bottom: 2px solid 	 #A99D9D; }
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .header { border-bottom: 4px solid #A99D9D;  }  } 
+
+#notice .container #contents_notice .notice_inner .header h2 { font-size: 2.5rem; color: #1B1616; padding-bottom: 11px;}
+
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .header h2 { font-size: 4.8rem; padding-bottom: 36px; } }
+
+/* #notice .container #contents_notice .notice_inner .header span { display: inline-block; border-radius: 100px; }
+
+#notice .container #contents_notice .notice_inner .header span a { display: inline-block; background-color: #ED6D1F; padding: 1.0rem 2.0rem; border-radius: 30px; border: 1px solid #ED6D1F; font-size: 16px; font-weight: bold; color: #fff; }
+
+#notice .container #contents_notice .notice_inner .header span a:hover { background-color: #fff; border: 1px solid #ED6D1F; color: #ED6D1F; } */
+#notice .container #contents_notice .notice_inner .notice_list ul { margin-top: 17px; }
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .notice_list ul { margin-top: 61px; } }
+
+#notice .container #contents_notice .notice_inner .notice_list ul li {  line-height: 29px; margin: 10px 0; }
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .notice_list ul li {margin: 56px 0; } #notice .container #contents_notice .notice_inner .notice_list ul li:first-child { margin-top: 0;} }
+
+#notice .container #contents_notice .notice_inner .notice_list ul li:hover a { color: #ED6D1F; }
+
+#notice .container #contents_notice .notice_inner .notice_list ul li a { display: inline-block; width: 100%; height: 35px; padding-left: 27px; background-image: url(../img/Q@2x.png); background-repeat: no-repeat; background-position: 0 3px; background-size: 20px 20px; font-size: 1.3rem; font-weight: bold; color: #1B1616; }
+
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .notice_list ul li a { font-size: 2.4rem; font-weight: bold;  background-size: 30px 30px; padding-left: 46px;} }
+
+#notice .container #contents_notice .notice_inner .pagination { width: 100%; padding-top: 117px; margin: 0 auto; text-align: center; }
+
+#notice .container #contents_notice .notice_inner .pagination .page_number { display: inline-block; width: 100%; }
+
+#notice .container #contents_notice .notice_inner .pagination .page_number li { display: inline-block; }
+
+
+#notice .container #contents_notice .notice_inner .pagination .page_number li:hover a { color: #ED6D1F; }
+
+#notice .container #contents_notice .notice_inner .pagination .page_number li a { display: inline-block; padding: 0 11px; font-size: 1.5rem; font-weight: 700; text-align: center; color: #1B1616; }
+@media (min-width: 1320px) { #notice .container #contents_notice .notice_inner .pagination .page_number li a { font-size: 2.4rem; padding: 0 17px; } }
+
+/*========== terms_of_services(이용약관), privacy(개인정보처리방침) ==========*/
+
+#terms { width: 100%; }
+
+#terms .container { width: 100%; }
+
+#terms .container .contents_terms_service { max-width: 1562px; width: 90%; /*padding: 0 5%;*/ margin: auto; }
+
+#terms .container .contents_terms_service .terms_service_inner .header { /*padding-bottom: 10px;*/ border-bottom: 2px solid 	 #A99D9D; }
+@media (min-width: 1320px) { #terms .container .contents_terms_service .terms_service_inner .header { border-bottom: 4px solid 	 #A99D9D; }  }
+
+#terms .container .contents_terms_service .terms_service_inner .header h2 { font-size: 2.5rem; color: #1B1616; margin-bottom: 11px; }
+
+
+@media (min-width: 1320px) { #terms .container .contents_terms_service .terms_service_inner .header h2 { font-size: 4.8rem; padding-bottom: 29px; } }
+
+#terms .container .contents_terms_service .terms_service_inner .terms_txt { margin-top: 27px; }
+
+#terms .container .contents_terms_service .terms_service_inner .terms_txt .list dl dt {  color: #1b1616; font-size: 1.3rem; font-weight: 700; }
+@media (min-width: 1320px) { #terms .container .contents_terms_service .terms_service_inner .terms_txt .list dl dt {font-size: 2.4rem;}  }
+
+
+#terms .container .contents_terms_service .terms_service_inner .terms_txt .list dd { margin-top: 17px; margin-bottom: 18px; padding-left: 14px; line-height: 20px; color: #665454; font-size: 1.3rem; font-weight: 400;}
+@media (min-width: 1320px) { #terms .container .contents_terms_service .terms_service_inner .terms_txt .list dd {font-size: 2.4rem; line-height: 34.75px; margin-bottom: 81px; padding-left: 20px; letter-spacing: -2px; line-height: 37px;}  }
+
+
+
+
+/*디자인 추가 수정 입력*/
+#terms .container .contents_terms_service .terms_service_inner .contents_terms_btn { width: 100%; }
+#terms .container .contents_terms_service .terms_service_inner .contents_terms_btn a { display: block; width: 156px; height: 38px; background-color: 
+    #64749F; border-radius: 64px; font-size: 1.2rem; font-weight: 600; text-align: center; line-height: 38px; color: #fff; margin: 100px auto 0; }
+@media (min-width: 1320px) { #terms .container .contents_terms_service .terms_service_inner .contents_terms_btn a  { display: block; padding: 0 37px; width:242px; height: 60px; font-size: 20px; line-height: 60px; letter-spacing: -2; } }

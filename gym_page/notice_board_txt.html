@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공지사항 작성하기</title>
+  <!--  link  -->
+  <link rel="stylesheet" href="../css/gym.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <!-- jq -->
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <!-- js -->
+  <script defer src="../js/tab.js"></script>
+</head>
+<body>
+<!--?------------------------------------------------>
+<!--?                   header                     -->
+<!--?------------------------------------------------>
+<header id="header">
+  <h1><a class="logo" href="../index.html">해봄</a></h1>
+
+  <nav class="main_nav">
+    <ul class="tabs">
+      <li><a class="tab_1" href="">해봄터</a></li>
+      <li><a href="../sub/expert_find.html">전문가 찾아봄</a></li>
+      <li><a href="../sub/commission.html">의뢰해봄</a></li>
+    </ul>
+  </nav>
+
+  <ul class="tab1 tab_1 none">
+    <li><a href="../sub/Haebomteo_home.html">홈</a></li>
+    <li><a href="../sub/Haebomteo_news.html">소식</a></li>
+    <li><a href="../sub/haebomteo_learning.html">배워봄</a></li>
+    <li><a href="../sub/usebome.html">써봄</a></li>
+    <li><a href="../sub/gabome.html">가봄</a></li>
+    <li><a href="../sub/Haebomteo_list.html">해봄터 목록</a></li>
+  </ul>
+
+  <!-- 로그인 전 -->
+  <!-- <div class="login">
+    <a id ="login">로그인</a> / <a href="../sub/normal_sign_up01.html">회원가입</a>
+  </div> -->
+
+  <!-- 로그인 후 -->
+  <div class=" sub_nav">
+    <div class="sub_nav_box">
+      <button type="button" class="user">
+        <span>민트초코단</span><span>님</span>
+      </button>
+      <div class="message"><a class="on" href="../sub/chatting.html">메시지</a></div>
+      <div class="cart"><a href="../sub/shopping_basket.html">카트</a></div>
+    </div>
+  </div>
+  
+
+  <div class="sub_nav_tab">
+      <!-- 일반회원 접속 시 -->
+        <!-- <ul>
+      <li><a href="./sub/normal_mydream.html">나의정보</a></li>
+      <li><a href="./sub/Register_expert.html">전문가 등록하기</a></li>
+      <li><a href="#">해봄터 등록하기</a></li>
+    </ul> -->
+
+<!-- 해봄지기 접속 시(전문가 전환 불가능) -->
+        <!-- <ul>
+      <li><a href="./sub/normal_mydream.html">해봄터 정보 관리</a></li>
+      <li><a href="#">일반회원으로 접속하기</a></li>
+      <li><a href="./sub/Register_expert.html">전문가 등록하기</a></li>
+    </ul> -->
+<!-- 전문가 접속 시(해봄지기 전환 불가능) -->
+        <!-- <ul>
+      <li><a href="./sub/register_detail.html">전문가 정보 관리</a></li>
+      <li><a href="#">일반회원으로 접속하기</a></li>
+      <li><a href="#">해봄터 등록하기</a></li>
+    </ul> -->
+<!-- 일반회원 접속 시(전문가 전환 가능) -->
+        <!-- <ul>
+      <li><a href="./sub/normal_mydream.html"">나의정보</a></li>
+      <li><a href="#">전문가로 접속하기</a></li>
+      <li><a href="#">해봄터 등록하기</a></li>
+    </ul> -->
+<!-- 해봄지기 접속 시(전문가 전환 가능) -->
+        <!-- <ul>
+      <li><a href="./sub/normal_mydream.html">해봄터 정보 관리</a></li>
+      <li><a href="#">전문가로 접속하기</a></li>
+      <li><a href="#">일반회원으로 접속하기</a></li>
+    </ul> -->
+<!-- 전문가 접속 시(해봄지기 전환 가능) -->
+        <!-- <ul>
+      <li><a href="./sub/register_detail.html">전문가 정보 관리</a></li>
+      <li><a href="#">일반회원으로 접속하기</a></li>
+      <li><a href="#">해봄지기로 접속하기</a></li>
+    </ul> -->
+  <!--일반회원 접속 시(해봄지기 전환 가능) -->
+        <!-- <ul>
+        <li><a href="./sub/normal_mydream.html">나의정보</a></li>
+        <li><a href="./sub/Register_expert.html">전문가 등록하기</a></li>
+        <li><a href="#">해봄지기로 접속하기</a></li>
+      </ul> -->
+<!--일반회원 접속 시(전문가 및 해봄지기 전환 가능) -->
+    <ul>
+      <li><a href="../sub/normal_mydream.html">나의정보</a></li>
+      <li><a href="../sub/Register_expert.html">전문가 등록하기</a></li>
+      <li><a href="#">해봄지기로 접속하기</a></li>
+    </ul>
+  </div>
+</header>
+<div class="blank_space"> </div>
+<!--?------------------------------------------------>
+<!--?               공지사항 작성하기               -->
+<!--?------------------------------------------------>
+  <div id="notice_board_txt">
+    <div class="container">
+      <div id="contents_notice_board">
+        <div class="notice_inner">
+          <div class="header">
+            <h2>공지사항 작성하기</h2>
+          </div>
+          <div class="notice_board_box">
+            <form>
+              <div class="form_group form_tit clearfix">
+                <label for="board_tit">제목</label>
+                <input type="text" class="form-control" id="board_tit" name="title" placeholder="제목을 입력 해 주세요.">
+              </div>
+              <div class="form_group board_area clearfix">
+                <label for="text_area">내용</label>
+                <textarea class="board_txt_area" id="text_area" name="contents" rows="5" cols="33" placeholder="내용을 입력 해 주세요"
+                  style="resize: none;"></textarea>
+              </div>
+              
+              <div class="input_file">
+                <div class="filebox">
+                  <label for="ex_file_1">파일 업로드</label> 
+                  <input type="file" id="ex_file_1"> 
+                </div>
+                <div class="filebox">
+                  <label for="ex_file_2">파일 업로드</label> 
+                  <input type="file" id="ex_file_2" > 
+                </div>
+                <div class="filebox">
+                  <label for="ex_file_3">파일 업로드</label> 
+                  <input type="file" id="ex_file_3"> 
+                </div>
+                <div class="filebox">
+                  <label for="ex_file_4">파일 업로드</label> 
+                  <input type="file" id="ex_file_4"> 
+                </div>
+                <div class="filebox">
+                  <label for="ex_file_5">파일 업로드</label> 
+                  <input type="file" id="ex_file_5"> 
+                </div>
+              </div>
+
+              <button type="submit" class="btn notice_board_btn">등록하기</button>
+            </form>
+          </div>
+
+         
+          
+
+        </div>
+      </div>
+      <!--  container END  -->
+    </div>
+    <!-- wrap END -->
+  </div>
+<!--?------------------------------------------------>
+<!--?                   footer                     -->
+<!--?------------------------------------------------>
+<footer id="footer">
+  <div class="footer_pc">
+    <div class="footer_call">
+      <h5>해봄 서비스 제공 회사</h5>
+      <p><span>상호명:(주)아이티몰즈</span><span>대표이사:한영훈</span><span>주소:전라북도 군산시 동수송안길 35,201호(수송동,드림빌딩)</span></p>
+      <p><span>사업자등록번호:249-86-01160</span><span>통신판매업신고증:제 2018-전북군산-00190호</span><span>개인정보책임자:육근철</span></p>
+    </div>
+    <div class="footer_call">
+      <h5>서비스 소개</h5>
+      <ul>
+        <li><a href="../sub/about_us.html">회사소개</a></li>
+        <li><a href="../sub/general_user_container.html">해봄지기 등록 소개</a></li>
+        <li><a href="">전문가 등록 소개</a></li>
+      </ul>
+    </div>
+    <div class="footer_call">
+      <h5>고객과의 소통</h5>
+      <ul>
+        <li><a href="../sub/notice.html">공지사항</a></li>
+        <li><a href="..sub/general_user_container.html">1:1문의</a></li>
+        <li><a href="../sub/FAQ.html">자주묻는질문</a></li>
+        <li><a href="../sub/dispute_mediation_center.html">분쟁조정센터</a></li>
+      </ul>
+    </div>
+    <div class="footer_call">
+      <h5>운영정책</h5>
+      <ul>
+        <li><a href="../sub/terms_of_servics.html">이용 약관</a></li>
+        <li><a href="../sub/location_based_service.html">위치기반서비스이용약관</a></li>
+        <li><a href="../sub/privacy.html">개인정보처리방침</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_m">
+    <span>
+      <p>
+        <!-- 로그인 전 -->
+        <!-- <span><a href="">로그인</a></span>
+        <span><a href="">회원가입</a></span> -->
+
+        <!-- 로그인 후 -->
+        <!-- 일반회원 -->
+        <span><a href="../sub/normal_mydream.html">마이 페이지</a></span>
+        <!-- 전문가 로그인 -->
+        <!-- <span><a href="../sub/register_detail.html">전문가 정보 관리</a></span> -->
+
+        <span><a href="../sub/haebome_enrollment.html">해봄지기 등록</a></span>
+        <span><a href="../sub/Register_expert.html">전문가 등록</a></span>
+      </p>
+    </span>
+    <p>
+      <span><a href="">PC버전</a></span>
+      <span><a href="">위치기반서비스이용약관</a></span>
+      <span><a href="../sub/privacy.html">개인정보처리방침</a></span>
+      <span><a href="">운영정책</a></span>
+    </p>
+    <p>
+      <span><a href="">통신판매업 제 2018-전북군산-00190호</a></span>
+      <span><a href="">고객센터</a></span>
+    </p>
+    <div class="logo">해봄</div>
+  </div>
+</footer>
+<!--?------------------------------------------------>
+<!--?                 bottom-nav                   -->
+<!--?------------------------------------------------>
+<div id="bottom-nav">
+  <ul>
+    <li><a href="../index.html"><span>홈</span></a></li>
+    <li><a href="../img/Frame.png"><span>해봄터</span></a></li>
+    <li><a href="../img/expert.png"><span>전문가찾아봄</span></a></li>
+    <li><a href="../img/request.png"><span>의뢰해봄</span></a></li>
+    <li><a href="../img/MyInformation.png"><span>나의정보</span></a></li>
+  </ul>
+</div>
+</body>
+</html>

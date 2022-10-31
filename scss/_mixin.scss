@@ -1,0 +1,97 @@
+//? 미디어쿼리
+$pc : 1024px;
+$tablet : 768px;
+@mixin outline {
+    box-shadow:  0 0 0 2px #000;
+}
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+@mixin pc {
+    @media (min-width:$pc) {
+        @content;
+    }
+}
+//? grid
+@mixin grid($row, $col) {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+//? 한줄 말줄임
+@mixin text_lne1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+}
+//? 두줄 말줄임
+@mixin txt_line($n) {
+    display: -webkit-box;
+    -webkit-line-clamp: $n;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+//? befor, after
+@mixin before ($width, $height){
+    &::before {
+        float: left;
+        display: block;
+        width: $width;
+        height: $height;
+        content: '';
+        @content;
+    }
+}
+@mixin after ($width, $height){
+    &::after {
+        float: right;
+        display: block;
+        width: $width;
+        height: $height;
+        content: '';
+        @content;
+    }
+}
+//? 백그라운드 이미지
+@mixin background_img ($width, $height) {
+    display: block;
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @content;
+}
+@mixin before_img ($width, $height){
+    &::before {
+        display: block;
+        width: $width;
+        height: $height;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: contain;
+        @content;
+    }
+}
+//?파일 필드 숨기기
+@mixin input_file_hidden{
+    input[type="file"] {  /* 파일 필드 숨기기 */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0,0,0,0);
+        border: 0;
+    }
+    label{
+        display: block;
+        cursor: pointer;
+        @content;
+    }
+}

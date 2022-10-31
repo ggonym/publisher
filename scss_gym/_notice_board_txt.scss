@@ -1,0 +1,126 @@
+
+/*   공지사항 작성하기   */
+#notice_board_txt {
+    width: 100%;
+    .container {
+        max-width: 1562px;
+        #contents_notice_board {
+            .notice_inner { 
+                max-width: 1024px;
+                width: 90%;
+                padding: 0 5%;
+                margin: 0 auto 200px;
+                .header {
+                    display: flex;
+				    justify-content: space-between;
+				    padding: {
+					bottom: 10px;
+				    };
+				   /* border-bottom: 4px solid 	 #A99D9D;*/
+                    h2 {
+                        font: {
+                        size: 1.8rem;
+                        };
+                        color: #1B1616;
+                        @include pc {
+                            font: {
+                                size: 4.8rem;
+                            };
+                            padding: 100px 0 36px;
+                        }
+                        
+                    }
+                }
+            .notice_board_txt {
+                margin-top: 77px;
+                form {
+                    .form_group {
+                      
+                        label {
+                            float: left; 
+                            display: block ;
+                            width: 100%;
+                            max-width: 1122px ;
+                            height: 60px;
+                            white-space: nowrap;
+                            padding-bottom: 19px;
+
+                        font: {
+                            size: 1.6rem;
+                            weight: 600;
+                            };
+                            color: #6E6B7B;
+                            label::placeholder {
+                                text-indent: 17px;
+                            }
+                            
+                        }
+                        input {
+                            display: block; 
+                            border: 1px solid #D8D6DE;
+                            border-radius: 5px;
+                            &:focus {
+                                outline: transparent;
+                            }  
+                            &::placeholder {
+                                text-indent: 17px;
+                            } 
+                            @include tablet {
+                                display: block;
+                            }
+                        }                          
+                     }
+                    .form_tit {
+                        input {
+                            width: 100%;
+                            max-width: 1122px;
+                            height: 60px;
+                        }
+                    }
+                    .board_area {
+                            margin-top: 37px;
+                            white-space: nowrap;
+                            padding-bottom: 19px;
+                        textarea {
+                            display: block;
+                            width: 100%;
+                            max-width: 1122px;
+                            height: 621px;
+                            display: block;
+                            border: 1px solid #D8D6DE;
+                            border-radius: 5px;
+                            &:focus {
+                                outline: transparent;
+                            }   
+                            &::placeholder {
+                                padding-top: 17px;
+                                text-indent: 17px;
+                            } 
+                        }
+                    } 
+                    .notice_board_btn {
+                        display: block;
+                        width: 175px;
+                        height: 65px;
+                        margin: 65px auto;
+                        background-color: #ED6D1F;
+                        border: none;
+                        border-radius: 100px;
+                        font: {
+                            size: 20px;
+                            weight: 700px;
+                            };
+                            color: #fff;
+                            &:hover{
+                                border: 1px solid #ED6D1F;
+                                background-color: #fff;
+                                color: #ED6D1F;
+                            }
+                        }
+                        
+                    }
+                 }
+            }
+        }
+    }
+}

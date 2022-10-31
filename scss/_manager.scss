@@ -1,0 +1,164 @@
+/*******************************************************/
+/*?                    기타 - 관리자                    */
+/*******************************************************/
+#manager {
+  h2 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 4px solid #a99d9d;
+    padding-top: 50px;
+    margin: auto;
+    font-size: 30px;
+
+    @include tablet {
+      height: 80px;
+      padding-top: 140px;
+      font-size: 48px;
+    }
+  }
+  .con{
+    display: flex;
+  }
+  .main-ul{
+    width: 271px;
+    border-right: 1px solid #e6e6e6;
+    img{
+      width: 146px;
+      margin: 30px 0 10px;
+    }
+    .main-li {
+      position: relative;
+    }
+    .main-li ul{
+      position: relative; 
+      left: 0;
+    }
+    .li-title{
+      background-color: $orange;
+      color: #fff;
+      padding-left: 30px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: 36px;
+    }
+    .home-list{
+      padding: 10px 0 30px;
+      li{
+        color: #686b6f;
+        padding-left: 30px;
+        font-size: 1.6rem;
+        line-height: 36px;
+      }
+    }
+  }
+  .inner_con{
+    width: 100%;
+    padding-top: 80px;
+    h3{
+      color: #000;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .authentication{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 88px 0 80px;
+      input{
+        max-width: 585px;
+        width: 80%;
+        height: 60px;
+        padding: 0 20px;
+        border: 1px solid #d8d6de;
+        border-radius: 5px;
+      }
+      button{
+        width: 209px;
+        height: 60px;
+        border-radius: 5px;
+        margin-left: 8px;
+        background-color: #6a6a6a;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: bold;
+        box-shadow: $box-shadow2;
+      }
+    }
+    .search{
+      display: block;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        margin-right: 20px;
+        margin-left: 8px;
+        color: #828181;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+      input{
+        padding: 5px 3px;
+        border: none;
+        border-bottom: 3px solid #e6e6e6;
+        color: #4b4b4b;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+      .date_search{
+        white-space: nowrap;
+        margin-bottom: 10px;
+        input{
+          max-width: 118px;
+        }
+      }
+      .text_search{
+        border-bottom: 3px solid #e6e6e6;
+        max-width: 248px;
+        white-space: nowrap;
+        input{
+          padding: 10px;
+          border: none;
+        }
+      }
+      @include tablet{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .registration{
+      display: block;
+      width: 209px;
+      border-radius: 5px;
+      margin: 66px 0 60px auto;
+      background-color: $orange;
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      line-height: 43px;
+      box-shadow: $box-shadow2;
+    }
+    .table{
+      color: #4b4b4b;
+      th{
+        height: 80px;
+        font-size: 1.5rem;
+      }
+      td{
+        height: 50px;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+      button{
+        max-width: 90px;
+        width: 90%;
+        height: 28px;
+        border-radius: 15px;
+        background-color: $orange;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+}

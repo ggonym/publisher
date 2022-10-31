@@ -1,0 +1,248 @@
+/*******************************************************/
+/*?                      결제하기                       */
+/*******************************************************/
+#payment{
+  padding-top: 85px;
+  h2{
+    margin-top: 83px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  h3{
+    padding-bottom: 8px;
+    border-bottom: 4px solid $orange;
+    margin-top: 80px;
+    color: #000;
+    font-size: 2rem;
+  }
+  h4{
+    font-size: 1.8rem;
+    margin: 40px 0 16px;
+  }
+  .con{
+    margin-right: 295px;
+    max-width: 870px;
+  }
+  .inner_wrap{
+    max-width: 1024px;
+    margin: auto;
+    position:relative
+  }
+  .progress{
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+    font-size: 2rem;
+    white-space: nowrap;
+    div{
+      display: flex;
+      align-items: center;
+      line-height: 30px;
+      color: #7d7d7d;
+    }
+    .num{
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      margin: 0 15px;
+      background-color: #c4c4c4;
+      color: #fff;
+      text-align: center;
+    }
+    .step1::after,
+    .step2::after{
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: 50px;
+      margin-right: 40px;
+      background-image: url(../img/arr.png);
+      background-size: cover;
+      content: '';
+    }
+    .step2{
+      color: $orange;
+      .num{
+        background-color: $orange;
+      }
+    }
+  }
+  .progress_details{
+    p{
+      color: #4b4b4b;
+      line-height: 20px;
+    }
+    table{
+      border-bottom: 1px solid #cbcbcb;
+    };
+    td{
+      border-top: 1px solid #cbcbcb;
+      color: #4b4b4b;
+      font-size: 1.5rem;
+    }
+    .seller{
+      color: #4b4b4b;
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 30px;
+      @include before (13px, 13px){
+        border-radius: 5px;
+        margin-top: 8px;
+        margin-right: 5px;
+        background-color: #c4c4c4;
+      }
+    }
+    .product_img img{
+      display: block;
+      height: 180px;
+    }
+    .product_name{
+      margin: 10px 10px 0 10px;
+      font-weight: bold;
+    }
+    .explanation{
+      margin: 0 10px 10px;;
+      @include txt_line(2)
+    }
+    .option{
+      margin: 15px 10px;
+      @include txt_line(1)
+    }
+    .price_td{
+      margin: 12px 10px;
+      font-weight: bold;
+      .price_discount{
+        color: $orange;
+      }
+    }
+  }
+  .payment_method{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cbcbcb;
+    h3{
+      margin-bottom: 25px;
+    }
+    input[type='radio']{
+      -webkit-appearance: none;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      border-radius: 50%;
+      outline: none;
+      box-shadow: 0 0 0 5px #e8e8e8;
+    }
+    input[type='radio']:checked{
+      box-shadow: 0 0 0 5px $orange;
+    }
+    label{
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    p{
+      margin-left: 20px;
+      line-height: 40px;
+    }
+  }
+  .terms{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #cbcbcb;
+    margin-bottom: 300px;
+    h3{
+      margin-bottom: 25px;
+    }
+    input[type='checkbox'] + label{
+      float: left;
+      display: inline-block;
+      margin: 0 10px 0 0 ;
+      width: 18px;
+      height: 18px;
+      border: 3px solid #cbcbcb;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }  
+    input[type='checkbox']:checked + label{
+      width: 18px;
+      height: 18px;
+      border: none;
+      background-color: $orange;
+    }
+    input[type='checkbox']:checked + label::before{
+      display: block;
+      width: 10px;
+      height: 8px;
+      margin-left: 4px;
+      margin-top: 5px;
+      background-image: url(../img/checkbox.png);
+      background-size: cover;
+      content: '';
+    }
+    p{
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.8rem;
+      letter-spacing: -0.5px;
+    }
+  }
+  .total_payment{
+    position: absolute;
+    top: 248px;
+    right: 0;
+    width: 283px;
+    height: 379px;
+    padding: 27px;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    transition: all .8s;
+    box-sizing: border-box;
+    h4{
+      margin-top: 10px;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .total_payment_con{
+      padding: 25px 0 10px;
+      border-top: 1px solid #c5c5c5;
+      border-bottom: 1px solid #c5c5c5;
+      p{
+        display: flex;
+        justify-content:space-between;
+        color: #000;
+        margin: 15px 0;
+        font-size: 1.5rem;
+      }
+      span span{
+        margin-right: 5px;
+        font-weight: bold;
+      }
+      .discount{
+        span span{
+          color: #ed2b00;
+        }
+      }
+      .total{
+        margin: 20px 0;
+        span{
+          line-height: 2.5rem;
+          vertical-align: bottom;
+        }
+        span span{
+          font-size: 2.2rem;
+          color: $orange;
+        }
+      }
+    }
+    .payment_bt{
+      width: 227px;
+      height: 47px;
+      border-radius: 5px;
+      margin-top: 25px;
+      background-color: $orange;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
