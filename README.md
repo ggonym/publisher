@@ -1,1 +1,1 @@
-# publisher
+# 이미지 파일을 제외한 html, css 파일입니다.
